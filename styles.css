@@ -1,0 +1,281 @@
+/* Various Items */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', sans-serif;
+    color: #3e362e;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #A69080;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left_col_margins {
+    margin-left: 10rem;
+}
+
+.bottom_row_margins{
+    margin-bottom: 7rem;
+}
+
+.column {
+    flex: 50%;
+}
+/* End Various Items */
+
+/* Navbar Section */
+.navbar {
+    background: #A69080;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px 0 35px;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.fadeIn-animation {
+    animation: .5s fadeIn;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar_item {
+    height: 65px;
+}
+
+.navbar_links {
+    color: #3e362e;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0 1rem;
+    height: 100%;
+    transition: transform .5s ease-in-out;
+    position: relative;
+}
+
+.navbar_links:hover {
+    transform: translate(4px);
+    font-style: italic;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar {
+        border-bottom: none;
+    }
+    .navbar_container {
+        display: flex;
+        justify-content: space-between;
+        height: 70px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar_menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all .7s ease-in-out;
+        height: 50vh;
+        z-index: -1;
+    }
+
+    .navbar_menu.active {
+        top: 100%;
+        opacity: 1;
+        transition: all .7s ease-in-out;
+        z-index: 99;
+        height: 50vh;
+        font-size: 20px;
+    }
+
+    .navbar_name {
+        padding-left: 25px;
+    }
+
+    .navbar_toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        transition: all 0.3s ease-in-out;
+        background: #3e362e;
+    }
+    .navbar_item {
+        width: 100%;
+    }
+
+    .navbar_links {
+        text-align:center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar_toggle .bar{
+        display: block;
+        cursor: pointer;
+        opacity: 80%;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* End Navbar Section */
+
+
+/* Social Media Links */
+.connections {
+    max-width: 20px;
+    max-height: 20px;
+    margin: 20px 10px 0 0;
+    opacity: 50%;
+}
+/* Social Media Links End */
+
+
+/* Intro and PFP Section */
+.hello {
+    font-size: 130px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.name {
+    font-weight: 500;
+    font-size: 60px;
+}
+
+.rows {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subheader {
+    font-weight: normal;
+    font-size: 15px;
+    margin-top: 10px
+}
+
+.headshot_png {
+    max-width: 500px;
+    max-height: 500px;
+}
+/* Intro and PFP Section End */
+
+
+/* About Me Section */
+.about_pars {
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 25px;
+    padding-right: 40px;
+}
+/* About Me Section End */
+
+/* Projects Section */
+.blueeating {
+    padding-right: 20px;
+    min-width: 50%;
+}
+
+.spacing {
+    margin-bottom: 15px;
+}
+
+.challenges {
+    margin-left: 20px;
+    padding-right: 20px;
+}
+
+.challenge_item{
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+/* Projects Section End */
+
+/* Contact Me Section */
+#contactMe {
+    margin-bottom: 40px;
+}
+
+.email {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: transform .5s ease-in-out;
+    margin-top: 20px;
+}
+
+.email:hover {
+    transform: translate(4px);
+    font-style: italic;
+}
+/* Contact Me Section End */
