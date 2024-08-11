@@ -11,8 +11,16 @@ html {
     scroll-behavior: smooth;
 }
 
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+}
+
 body {
-    background-color: #A69080;
+    background-color: #b69f8f;
 }
 
 .row {
@@ -22,11 +30,11 @@ body {
 }
 
 .left_col_margins {
-    margin-left: 10rem;
+    margin-left: 4rem;
 }
 
 .bottom_row_margins{
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
 }
 
 .column {
@@ -36,7 +44,7 @@ body {
 
 /* Navbar Section */
 .navbar {
-    background: #A69080;
+    background: #b69f8f;
     height: 70px;
     display: flex;
     justify-content: center;
@@ -56,22 +64,6 @@ body {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 50px 0 35px;
-}
-
-@keyframes fadeIn {
-    0% {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0%);
-        opacity: 1;
-    }
-}
-
-.fadeIn-animation {
-    animation: .5s fadeIn;
 }
 
 .navbar_menu {
@@ -95,13 +87,48 @@ body {
     font-weight: 500;
     padding: 0 1rem;
     height: 100%;
-    transition: transform .5s ease-in-out;
     position: relative;
+    transition: transform .5s ease-in;
 }
 
 .navbar_links:hover {
-    transform: translate(4px);
+    transform: translateX(5px);
     font-style: italic;
+}
+
+ @keyframes navButtonsDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeDown {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+
+.home_link .logo {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: navButtonsDown 1s ease-in-out 1s forwards; 
+}
+
+ .about {
+    animation: navButtonsDown 1s ease-in-out 1.2s forwards; 
+}
+
+.project {
+    animation: navButtonsDown 1s ease-in-out 1.3s forwards; 
+}
+
+.cv {
+    animation: navButtonsDown 1s ease-in-out 1.4s forwards; 
+}
+
+.contact {
+    animation: navButtonsDown 1s ease-in-out 1.5s forwards; 
 }
 
 @media screen and (max-width: 960px) {
@@ -196,12 +223,28 @@ body {
     max-width: 20px;
     max-height: 20px;
     margin: 20px 10px 0 0;
-    opacity: 50%;
 }
 /* Social Media Links End */
 
 
 /* Intro and PFP Section */
+
+@keyframes fadeInAnimation {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.fadeInIntro {
+    animation: fadeInAnimation 1.5s ease;
+}
+
 .hello {
     font-size: 130px;
     font-weight: 600;
@@ -218,7 +261,7 @@ body {
 }
 
 .subheader {
-    font-weight: normal;
+    font-weight: 500;
     font-size: 15px;
     margin-top: 10px
 }
@@ -231,16 +274,32 @@ body {
 
 
 /* About Me Section */
+
+.fadeIn {
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 1s;
+}
+  
+ .fadeIn.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
 .about_pars {
     margin-bottom: 15px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 25px;
     padding-right: 40px;
 }
 /* About Me Section End */
 
 /* Projects Section */
+#projects {
+    justify-content: flex-start;
+}
+
 .blueeating {
     padding-right: 20px;
     min-width: 50%;
@@ -257,10 +316,16 @@ body {
 
 .challenge_item{
     font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+/* Projects Section End */
+
+/* CV Section */
+.list_margins {
     margin-bottom: 10px;
 }
 
-/* Projects Section End */
 
 /* Contact Me Section */
 #contactMe {
@@ -274,8 +339,8 @@ body {
     margin-top: 20px;
 }
 
-.email:hover {
-    transform: translate(4px);
-    font-style: italic;
+.credit {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px
 }
 /* Contact Me Section End */

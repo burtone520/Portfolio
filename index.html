@@ -11,103 +11,179 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
     <body>
         <nav class="navbar">
             <div class="navbar_container">
-                <a href="#home" class="logo"><img src="images/EBLogo.png" style="width: 80px; height: 80px"></i></a> 
+                <a href="#home" class="home_link"><img src="images/EBLogo.png" class="logo" style="width: 80px; height: 80px"></i></a> 
                 <div class="navbar_toggle" id="mobile-menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
                 <ul class="navbar_menu">
-                    <li class="navbar_item">
-                        <a href="#aboutMe" class="navbar_links hover_effects">About Me</a>
+                    <li class="navbar_item about fadeDown">
+                        <a href="#aboutMe" class="navbar_links">About Me</a>
                     </li>
-                    <li class="navbar_item">
-                        <a href="#projects" class="navbar_links  hover_effects">Projects</a>
+                    <li class="navbar_item project fadeDown">
+                        <a href="#projects" class="navbar_links">Projects</a>
                     </li>
-                    <li class="navbar_item">
-                        <a href="/" class="navbar_links  hover_effects">Experience</a>
+                    <li class="navbar_item cv fadeDown">
+                        <a href="#cv" class="navbar_links">CV</a>
                     </li>
-                    <li class="navbar_item">
-                        <a href="#contactMe" class="navbar_links  hover_effects">Contact Me</a>
+                    <li class="navbar_item contact fadeDown">
+                        <a href="#contactMe" class="navbar_links">Contact Me</a>
                     </li>
                 </ul>
             </div>
         </nav>
         <div class="main_container" id="home">
-            <div class="row bottom_row_margins">
-                <div class="column left_col_margins">
-                    <h1 class="hello" style="margin-left: -13px">Hello!</h1>
-                    <h1 class="rows name fix_margin"  style="margin-left: -7px">I'm Elora Burton</h1>
-                    <h2 class="rows subheader">Junior Software Developer - Student</h2>
-                    <h2 class="rows subheader">Graduating December 2024 with a BA in Computer Science</h2>
-                    <div>
-                        <a href="https://www.linkedin.com/in/elora-burton-3a738a270"><img class="connections" src="images/linkedingreen.svg"></i></a>
-                        <a href="https://github.com/burtone520"><img class="connections" src="images/githubgreen.svg"></i></a>
-                        <a href="mailto:burtone520@gmail.com"><img class="connections" src="images/mailgreen.svg"></i></a>
+                <div class="row bottom_row_margins">
+                    <div class="column left_col_margins">
+                        <h1 class="hello fadeInIntro" style="margin-left: -13px">Hello!</h1>
+                        <h1 class="rows name fix_margin fadeInIntro" style="margin-left: -7px">I'm Elora Burton</h1>
+                        <h2 class="rows subheader fadeInIntro">Junior Software Developer - Student</h2>
+                        <h2 class="rows subheader fadeInIntro">Graduating December 2024 with a BA in Computer Science</h2>
+                        <div>
+                            <a href="https://www.linkedin.com/in/elora-burton-3a738a270"><img class="connections fadeInIntro" src="images/linkedin.svg"></i></a>
+                            <a href="https://github.com/burtone520"><img class="connections fadeInIntro" src="images/github-brands-solid.svg"></i></a>
+                            <a href="mailto:burtone520@gmail.com"><img class="connections fadeInIntro" src="images/envelope-solid.svg"></i></a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <img src="images/finalpfp.jpeg" class="headshot_png fadeInIntro">
                     </div>
                 </div>
-                <div class="column">
-                    <img src="images/finalpfp.jpeg" class="headshot_png">
+            <section class="fadeIn">
+                <div class="row bottom_row_margins" id="aboutMe">
+                    <div class="column left_col_margins">
+                        <h1>About Me</h1>
+                    </div>
+                    <div class="column" style="min-width: 70%">
+                        <p class="about_pars">My experience with software development started in 8th grade, when I created a 
+                            website for a school course. Using simple HTML with some CSS, I quickly fell in love with programming. It took a while to discover where I excelled, but I have had the privilege of working as an intern software developer for over a year now,
+                            which made me realize that I truly want to be a software developer. </p>
+                        <p class="about_pars">As I come closer to the end of college, my goals have shifted slightly. I am currently focusing on
+                            finishing out my education strong, but also continuing to push myself in software development to become a better programmer for myself. 
+                            Additionally, I'm looking to work on my leadership goals, to hopefully one day lead a team.</p>
+                        <p class="about_pars">Outside of work, you can pretty much always find me in my kitchen baking something, hanging out with my cats and fiance, or reading a new book!</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row bottom_row_margins" id="aboutMe">
-                <div class="column left_col_margins">
-                    <h1>About Me</h1>
+            </section>
+            <section class="fadeIn" id="projects">
+                <div class="row left_col_margins" style="display: flex; justify-content: flex-start; margin-bottom: 3rem">
+                    <h1>Projects</h1>
                 </div>
-                <div class="column" style="min-width: 70%">
-                    <p class="about_pars">My experience with software development started in 8th grade, when I created a 
-                        website for a school course. Using simple HTML with some CSS, I quickly fell in love with programming. It took a while to discover where I excelled, but I have had the privilege of working as an intern software developer for over a year now,
-                        which made me realize that I truly want to be a software developer. </p>
-                    <p class="about_pars">As I come closer to the end of college, my goals have shifted slightly. I am currently focusing on
-                        finishing out my education strong, but also continuing to push myself in software development to become a better programmer for myself. 
-                        Additionally, I'm looking to work on my leadership goals, to hopefully one day lead a team.</p>
-                    <p class="about_pars">Outside of work, you can pretty much always find me in my kitchen baking something, hanging out with my cats and fiance, or reading a new book!</p>
+                <div class="row bottom_row_margins">
+                    <div class="column left_col_margins">
+                        <img style="max-height: 400px;" src="images/blue eating/Untitled design.svg">
+                    </div>
+                    <div class="column blueeating">
+                        <h1 class="spacing">Blue Eating</h1>
+                        <h3 class="spacing">Hack PSU - March 2024</h3>
+                        <p class="about_pars spacing">Blue Eating is a project created by myself and three other very talented software developers for a coding competition.
+                        The theme of the competition was Earth Day, therefore our website was based around the most famous 'Blue Zones.' It features a login page for users to create an account,
+                        as well as a place to upload their own healthy recipes from Blue Zones, and the ability to search recipes on the site based on dietary restrictions.
+                        </p>
+                        <h3 class="spacing">Challenges</h3>
+                        <ol type="1" class="challenges">
+                            <li class="challenge_item">Staying up and finishing a site in 24 hours</li>
+                            <li class="challenge_item">Learning React.js in 24 hours only based off knowledge of Angular</li>
+                            <li class="challenge_item">Working as a team under a time constraint and staying organized on our individual tasks</li>
+                            <li class="challenge_item">Presenting to a multitude of different judges and explaining exactly how our code works</li>
+                        </ol>
+                    </div>
                 </div>
-            </div>
-            <div class="row bottom_row_margins" id="projects">
-                <h1>Projects</h1>
-            </div>
-            <div class="row bottom_row_margins">
-                <div class="column left_col_margins">
-                    <img src="images/blue eating/Untitled design.svg">
+            </section>
+            <section class="fadeIn">
+                <div class="row">
+                    <div class="column left_col_margins">
+                        <h1 class="spacing">Global Talk</h1>
+                        <h3 class="spacing">Personal Project - February to May 2024</h3>
+                        <p class="about_pars spacing">Global Talk was a personal project done for school that I extended in my own time. 
+                            It is an app done in Java using Android Studio, that helps users quickly see how to ask for directions, proper greetings based on formality, and how to order.
+                            Users can select from six different language packs, each language having three options for vocabulary/phrases, and the ability to share the app on social media platforms.</p>
+                        <h3 class="spacing">Challenges</h3>
+                        <ol type="1" class="challenges">
+                            <li class="challenge_item">Coming up with an eyecatching but easy to view design</li>
+                            <li class="challenge_item">Using my old knowledge of Java to build an app</li>
+                            <li class="challenge_item">Research and documentation on best app design practices</li>
+                        </ol>
+                    </div>
+                    <div class="column">
+                        <img src="images/global talk/id=projects.svg">
+                    </div>
                 </div>
-                <div class="column blueeating">
-                    <h2 class="spacing">Blue Eating</h2>
-                    <h3 class="spacing">Hack PSU - March 2024</h3>
-                    <p class="about_pars spacing">Blue Eating is a project created by myself and three other very talented software developers for a coding competition.
-                    The theme of the competition was Earth Day, therefore our website was based around the most famous 'Blue Zones.' It features a login page for users to create an account,
-                    as well as a place to upload their own healthy recipes from Blue Zones, and the ability to search recipes on the site based on dietary restrictions.
-                    </p>
-                    <h3 class="spacing">Challenges</h3>
-                    <ol type="1" class="challenges">
-                        <li class="challenge_item">Staying up and finishing a site in 24 hours</li>
-                        <li class="challenge_item">Learning React.js in 24 hours only based off knowledge of Angular</li>
-                        <li class="challenge_item">Working as a team under a time constraint and staying organized on our individual tasks</li>
-                        <li class="challenge_item">Presenting to a multitude of different judges and explaining exactly how our code works</li>
-                    </ol>
+            </section>
+            <section class="fadeIn" id="cv">
+                <div class="row left_col_margins"  style="display: flex; justify-content: flex-start; margin-bottom: 3rem">
+                    <h1>CV</h1>
                 </div>
-            </div>
-            <div class="row bottom_row_margins">
-                <div class="column left_col_margins">
-
+                <div class="row" style="margin-bottom: 7rem; align-items: start;">
+                    <div class="column left_col_margins">
+                        <h1 class="list_margins">Work Experience</h1>
+                        <h3>ClassLink</h3>
+                        <h3>June 2023 - Present</h3>
+                        <p class="list_margins">- Intern Software Developer</p>
+                        <h3>East Stroudsburg University</h3>
+                        <h3>January 2023 - January 2024</h3>
+                        <p>- French Language Tutor</p>
+                    </div>
+                    <div class="column">
+                        <h1 class="list_margins">Languages & Technologies</h1>
+                        <p>- HTML/CSS/Javascript</p> 
+                        <p>- C#/C++/C/Java</p>
+                        <p>- React.js/Angular</p>
+                        <p>- Figma</p>
+                        <p>- Visual Studio/Visual Studio Code</p>
+                        <p>- HyperV</p>
+                    </div>
+                    <div class="column">
+                        <h1 class="list_margins">Education</h1>
+                        <h3>West Chester University</h3>
+                        <h3>August 2020 - December 2021</h3>
+                        <p class="list_margins">- Computer Science | French Linguistics</p>
+                        <h3>East Stroudsburg University</h3>
+                        <h3>January 2022 - Present</h3>
+                        <p>- BA in Computer Science</p>
+                        <p>- Graduation Date: December 2024</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row bottom_row_margins" id="contactMe">
-                <div class="column left_col_margins">
-                    <h4>Get in touch</h4>
-                    <a href="mailto:burtone520@gmail.com" style="text-decoration: none;"><h2 class="email">burtone520@gmail.com</h2></a>
+            </section>
+            <section class="fadeIn">
+                <div class="row bottom_row_margins" id="contactMe">
+                    <div class="column left_col_margins">
+                        <h4>Get in touch</h4>
+                        <a href="mailto:burtone520@gmail.com" style="text-decoration: none;"><h2 class="email">burtone520@gmail.com</h2></a>
+                    </div>
+                    <div class="column">
+                        <h4>Social Media</h4>
+                        <a href="https://www.linkedin.com/in/elora-burton-3a738a270"><img class="connections" src="images/linkedin.svg"></i></a>
+                        <a href="https://github.com/burtone520"><img class="connections" src="images/github-brands-solid.svg"></i></a>
+                    </div>
+                    <div class="column">
+                        <img style="max-width: 9px; max-height: 9px;" src="images/copyright-regular.svg"><span class="credit"> 2024</span>
+                        <p class="credit">Briefly designed using Framer and Visual Studio Code. Languages used are HTML, CSS, and Javascript.</p>
+                    </div>
                 </div>
-                <div class="column">
-                    <h4>Social Media</h4>
-                    <a href="https://www.linkedin.com/in/elora-burton-3a738a270"><img class="connections" src="images/linkedingreen.svg"></i></a>
-                    <a href="https://github.com/burtone520"><img class="connections" src="images/githubgreen.svg"></i></a>
-                </div>
-            </div>
+            </section>
         </div>
-    <script src="app.js"></script>
+        <script src="app.js"></script>
+        <script>
+            $(document).on("scroll", function() {
+                var pageTop = $(document).scrollTop();
+                var pageBottom = pageTop + $(window).height();
+                var tags = $(".fadeIn");
+
+                for (var i = 0; i < tags.length; i++) {
+                    var tag = tags[i];
+                    
+                    if ($(tag).position().top < pageBottom) {
+                        $(tag).addClass("visible");
+                    }
+                }
+            });
+        </script>
     </body>
 </html>
