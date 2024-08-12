@@ -40,6 +40,10 @@ body {
 .column {
     flex: 50%;
 }
+
+.scroll_margins {
+    scroll-margin-top: 150px;
+}
 /* End Various Items */
 
 /* Navbar Section */
@@ -165,6 +169,8 @@ body {
         z-index: 99;
         height: 50vh;
         font-size: 20px;
+        background-color: #b69f8f;
+        color:#3e362e; 
     }
 
     .navbar_name {
@@ -249,11 +255,13 @@ body {
     font-size: 130px;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
+    color: #31281e;
 }
 
 .name {
     font-weight: 500;
     font-size: 60px;
+    color: #382e23;
 }
 
 .rows {
@@ -293,11 +301,29 @@ body {
     line-height: 25px;
     padding-right: 40px;
 }
+
+#aboutMe h1 {
+    color: #382e23;
+    font-size: 2rem;
+}
 /* About Me Section End */
 
 /* Projects Section */
+#projects h1 {
+    color: #382e23;
+    font-size: 2rem;
+}
+
+.project_container h1, h2, h3{
+    color: #382e23;
+}
+
 #projects {
     justify-content: flex-start;
+}
+
+#projects h3 {
+    font-weight: 600;
 }
 
 .blueeating {
@@ -322,12 +348,29 @@ body {
 /* Projects Section End */
 
 /* CV Section */
+#cv h1{
+    color: #382e23;
+    font-size: 2rem;
+}
+
+#cv h2, h3{
+    color: #382e23;
+}
+
+#cv h3 {
+    font-weight: 600;
+}
+
 .list_margins {
     margin-bottom: 10px;
 }
-
+/* CV Section End */
 
 /* Contact Me Section */
+#contactMe h4{
+    color: #382e23;
+}
+
 #contactMe {
     margin-bottom: 40px;
 }
@@ -344,3 +387,60 @@ body {
     font-size: 12px
 }
 /* Contact Me Section End */
+
+/*Media Queries*/
+@media screen and (max-width: 1100px) {
+    .hello {
+        font-size: 100px;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .headshot_png {
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hello {
+        font-size: 100px;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .about_pars {
+        padding-right: 0;
+    }
+
+    .blueeating {
+        min-width: 100%;
+    }
+
+    .challenges {
+        padding-right: 0;
+    }
+
+    .challenge_item {
+        margin-left: 0;
+    }
+    .row{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .column{
+        padding: 20px;
+    }
+    .left_col_margins{
+        margin-left: 0;
+    }
+
+    .small_column {
+        align-items: center;
+    }
+}
