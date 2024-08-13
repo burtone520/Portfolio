@@ -23,6 +23,10 @@ body {
     background-color: #b69f8f;
 }
 
+.column {
+    flex: 50%;
+}
+
 .row {
     display: flex;
     align-items: center;
@@ -35,10 +39,6 @@ body {
 
 .bottom_row_margins{
     margin-bottom: 5rem;
-}
-
-.column {
-    flex: 50%;
 }
 
 .scroll_margins {
@@ -405,6 +405,7 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+
     .hello {
         font-size: 100px;
     }
@@ -415,6 +416,7 @@ body {
 
     .about_pars {
         padding-right: 0;
+        font-size: 13px;
     }
 
     .blueeating {
@@ -440,7 +442,28 @@ body {
         margin-left: 0;
     }
 
-    .small_column {
-        align-items: center;
+    #contactMe:not(#keep_width) {
+        flex-direction: row;
+    }
+
+    .email {
+        font-size: 18px;
+    }
+
+    #accountSponsorship {
+        max-width: 80%;
+    }
+
+    #col_decrease {
+        flex-direction: row;
+        font-size: 13px;
+    }
+
+    .challenge_item {
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 20px;
     }
 }
